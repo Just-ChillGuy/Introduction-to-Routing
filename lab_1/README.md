@@ -105,3 +105,23 @@ clab deploy -t lab.yaml
 ```
 sudo docker exec -it clab-lab_1-PC1 sh
 ```
+
+Настраиваем PC1:
+
+```
+sh configs/setup_pc1.sh
+```
+
+Проверяем:
+
+```
+ip addr
+```
+
+То же самое для PC2:
+
+```
+sudo docker exec -it clab-lab_1-PC2 sh
+sh configs/setup_pc2.sh
+ip addr
+```
