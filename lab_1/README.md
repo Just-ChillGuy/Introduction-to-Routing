@@ -93,3 +93,15 @@ ls -a
 vrnetlab/mikrotik/routeros
 ```
 
+Далее захожу в свой репозиторией с lab.yaml.
+Запускаю Containerlab, происходит считывание указанного файла топологии.
+
+```
+clab deploy -t lab.yaml
+```
+
+Открываем интерактивный терминал внутри контейнера clab-lab_1-PC1:
+
+```
+sudo docker exec -it clab-lab_1-PC1 sh
+```
