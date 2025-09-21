@@ -65,4 +65,30 @@ lscpu | grep -E 'vmx|svm' || egrep -c '(vmx|svm)' /proc/cpuinfo
 ls -l /dev/kvm
 ```
 
+Теперь скачаем установочный скрипт containerlab:
 
+```
+bash -c "$(curl -sL https://get.containerlab.dev)"
+```
+Установил Docker и docker-compose, включил и запустил сервис Docker при старте системы, добавил пользователя ivan001 в группу docker, чтобы можно было работать без sudo
+
+```
+sudo apt install -y docker.io docker-compose
+sudo systemctl enable --now docker
+sudo usermod -aG docker $USER
+newgrp docker
+```
+
+Клонировал репозиторий vrnetlab из GitHub
+
+```
+cd vrnetlab
+ls -a
+cd mikrotik/routeros
+ls -a
+```
+
+В эту папку закинул chr-6.47.9.vmdk:
+```
+vrnetlab/mikrotik/routeros
+```
