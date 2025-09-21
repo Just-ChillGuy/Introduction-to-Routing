@@ -304,3 +304,8 @@ add disabled=no interface=br_v20
 ```
 
 Настраивает коммутатор SW3, создавая VLAN-интерфейсы vlan20_e3 на порту ether3 и vlan20_e4 на порту ether4 с идентификатором VLAN 20, затем объединяет эти VLAN-интерфейсы в мост br_v20, подключает к мосту оба VLAN-интерфейса, включает DHCP-клиент на мосту br_v20 для автоматического получения IP-адреса, создаёт пользователя newadmin с полными правами и задаёт имя устройства SW3-Switch.
+
+# Схема связи
+
+<img width="1152" height="850" alt="image" src="https://github.com/user-attachments/assets/0a68ada0-251d-4cbe-8c43-7438c88f7517" />
+
