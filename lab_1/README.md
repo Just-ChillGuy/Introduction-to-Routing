@@ -125,3 +125,19 @@ sudo docker exec -it clab-lab_1-PC2 sh
 sh configs/setup_pc2.sh
 ip addr
 ```
+
+Из PC1 пингуем PC2:
+
+```
+ping 10.10.20.10
+```
+
+Если что, оно действительно проходит
+
+Из PC2 пингуем PC1:
+
+```
+ping 10.10.10.10
+```
+
+Тоже всё проходит.
