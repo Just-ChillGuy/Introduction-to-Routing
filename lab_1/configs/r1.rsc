@@ -13,5 +13,5 @@ add name=dhcp_vlan20 interface=vlan20 address-pool=dhcp_pool_vlan20 disabled=no
 /ip dhcp-server network
 add address=10.10.10.0/24 gateway=10.10.10.1
 add address=10.10.20.0/24 gateway=10.10.20.1
-/user add name=newadmin password=newadmin group=full
+/user add name=newadmin password=192856 group=full
 /system identity set name=R1-Router
