@@ -10,17 +10,17 @@ topology:
   nodes:
     R01_msk:
       kind: mikrotik_routeros
-      mgmt_ipv4: 192.168.50.11
+      mgmt-ipv4: 192.168.50.11
       startup-config: ./configs/r1.rsc
 
     R02_brl:
       kind: mikrotik_routeros
-      mgmt_ipv4: 192.168.50.12
+      mgmt-ipv4: 192.168.50.12
       startup-config: ./configs/r2.rsc
 
     R03_frt:
       kind: mikrotik_routeros
-      mgmt_ipv4: 192.168.50.13
+      mgmt-ipv4: 192.168.50.13
       startup-config: ./configs/r3.rsc
 
     PC1:
