@@ -2,3 +2,6 @@
 lab_1/clab-lab1
 lab_1/configs/*.save
 lab_1/*.networklab.clab.yaml.bak
+lab_2/clab-lab2
+lab_2/configs/*.save
+lab_2/*.networklab.clab.yaml.bak
