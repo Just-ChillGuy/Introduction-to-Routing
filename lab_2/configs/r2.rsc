@@ -13,3 +13,6 @@ add distance=1 dst-address=192.168.1.0/24 gateway=10.10.10.1
 add distance=1 dst-address=192.168.3.0/24 gateway=20.20.20.2
 /system identity
 set name=R02_brl
+/system identity
+set name=R02_brl
+/user set admin password=192856
