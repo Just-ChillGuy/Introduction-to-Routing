@@ -156,5 +156,46 @@ sudo containerlab deploy -t networklab.clab.yaml
 ```
 ssh admin@192.168.50.11
 ```
+[admin@R01_msk] > ip route print
+Flags: X - disabled, A - active, D - dynamic, C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme, 
+B - blackhole, U - unreachable, P - prohibit 
+ #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
+ 0 ADC  10.10.10.0/30      10.10.10.1      ether3                    0
+ 1 ADC  30.30.30.0/30      30.30.30.2      ether4                    0
+ 2 ADC  172.31.255.28/30   172.31.255.30   ether1                    0
+ 3 ADC  192.168.1.0/24     192.168.1.2     ether5                    0
+ 4 A S  192.168.2.0/24                     10.10.10.2                1
+ 5 A S  192.168.3.0/24                     30.30.30.1 
 
+
+ Проверим пк1: 
+
+ ```
+ sudo docker exec -it clab--PC1 sh
+```
+
+Настроим пк:
+
+```
+udhcpc -i eth2
+```
+то же делаем и с пк2 и 3.
+
+Пропингуем: 
+
+--- 192.168.3.200 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+round-trip min/avg/max = 1.047/2.109/3.312 ms
+/ # ping 192.168.2.200
+PING 192.168.2.200 (192.168.2.200): 56 data bytes
+64 bytes from 192.168.2.200: seq=0 ttl=60 time=1.184 ms
+64 bytes from 192.168.2.200: seq=1 ttl=60 time=0.870 ms
+64 bytes from 192.168.2.200: seq=2 ttl=60 time=1.766 ms
+64 bytes from 192.168.2.200: seq=3 ttl=60 time=1.144 ms
+^C
+--- 192.168.2.200 ping statistics ---
+4 packets transmitted, 4 packets received, 0% packet loss
+
+
+С пк2 и 3 ситуация аналогичная, всё работает
 
