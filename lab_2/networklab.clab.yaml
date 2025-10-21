@@ -2,8 +2,8 @@ name: lab2
 
 topology:
     kinds:
-        vr-mikrotik_ros:
-            image: vrnetlab/vr-routeros:6.47.9
+    vr-mikrotik_ros:
+        image: vrnetlab/mikrotik_routeros:6.47.9
         linux:
             image: alpine:latest
     nodes:
