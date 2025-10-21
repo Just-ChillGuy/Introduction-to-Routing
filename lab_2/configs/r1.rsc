@@ -13,3 +13,6 @@ add distance=1 dst-address=192.168.2.0/24 gateway=10.10.10.2
 add distance=1 dst-address=192.168.3.0/24 gateway=30.30.30.1
 /system identity
 set name=R01_msk
+/system identity
+set name=R01_msk
+/user set admin password=192856
