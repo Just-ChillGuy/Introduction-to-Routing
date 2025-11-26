@@ -1,5 +1,5 @@
 /interface bridge
-add name=loopback
+add name=loopback  
 add name=vpn
 /interface vpls
 add disabled=no l2mtu=1500 mac-address=02:D5:99:AF:81:85 name=eovpls remote-peer=172.16.6.2 vpls-id=65500:666
@@ -33,4 +33,3 @@ add area=backbone network=192.168.1.0/24
 add area=backbone network=172.16.1.2/32
 /system identity
 set name=R01_SPB
-
