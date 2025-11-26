@@ -17,3 +17,4 @@ add area=backbone network=172.16.6.100/30
 add area=backbone network=172.16.4.2/32
 /system identity
 set name=R01_LND
+/user set admin password=192856
