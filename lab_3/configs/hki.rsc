@@ -20,3 +20,4 @@ add area=backbone network=172.16.4.100/30
 add area=backbone network=172.16.2.2/32
 /system identity
 set name=R01_HKI
+/user set admin password=192856
