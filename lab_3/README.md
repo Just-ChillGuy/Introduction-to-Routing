@@ -116,3 +116,35 @@ set name=R01_SPB
 В OSPF маршрутизатор получает router-id 172.16.6.2. На интерфейс loopback назначается адрес 172.16.6.2/32. Сетевые интерфейсы ether3 и ether4 получают линковые /30-адреса для взаимодействия с соседями в MPLS-облаке, а через ether5 поднимается локальная сеть 192.168.2.0/30, которая затем включается в мост vpn. Сегмент vpn также получает адрес 10.10.10.1/24 — это шлюз для той же VPN-сети, к которой на другой стороне подключается eovpls.
 
 После этого включается MPLS-LDP с использованием loopback-адреса как идентификатора и transport-address. Интерфейсы ether3, ether4 и ether5 добавляются как LDP-носители, чтобы по ним происходил обмен метками. В OSPF в область backbone включаются обе линковые сети, а также loopback-адрес /32, чтобы обеспечить построение корректных MPLS-путей.
+
+```
+/interface bridge
+add name=loopback
+add name=vpn
+/interface vpls
+add disabled=no l2mtu=1500 mac-address=02:5C:67:11:1C:D6 name=eovpls remote-peer=172.16.1.2 vpls-id=65500:666
+/routing ospf instance
+set [ find default=yes ] router-id=172.16.6.2
+/interface bridge port
+add bridge=vpn interface=ether5
+add bridge=vpn interface=eovpls
+/ip address
+add address=172.16.6.2/32 interface=loopback network=172.16.6.2
+add address=172.16.6.102/30 interface=ether3 network=172.16.6.100
+add address=172.16.7.102/30 interface=ether4 network=172.16.7.100
+add address=192.168.2.1/30 interface=ether5 network=192.168.2.0
+add address=10.10.10.1/24 interface=vpn network=10.10.10.0
+/mpls ldp
+set enabled=yes lsr-id=172.16.6.2 transport-address=172.16.6.2
+/mpls ldp interface
+add interface=ether3
+add interface=ether4
+add interface=ether5
+/routing ospf network
+add area=backbone network=172.16.6.100/30
+add area=backbone network=172.16.7.100/30
+add area=backbone network=172.16.6.2/32
+/system identity
+set name=R01_NY
+/user set admin password=192856
+```
