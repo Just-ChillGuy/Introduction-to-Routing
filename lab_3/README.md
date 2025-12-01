@@ -61,3 +61,5 @@ topology:
     - endpoints: ["R01_NY:eth2", "R01_LND:eth3"]
     - endpoints: ["R01_NY:eth4", "SGI_PRISM:eth2"]
 ```
+
+<img width="1252" height="427" alt="image" src="https://github.com/user-attachments/assets/960a38e2-3099-4213-9537-e45ff198d692" />
