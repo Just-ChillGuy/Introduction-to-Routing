@@ -199,3 +199,4 @@ PING 192.168.2.200 (192.168.2.200): 56 data bytes
 
 С пк2 и 3 ситуация аналогичная, всё работает
 
+<img width="809" height="600" alt="image" src="https://github.com/user-attachments/assets/be638fdd-0e6b-4e7a-a063-83fbcf569457" />
