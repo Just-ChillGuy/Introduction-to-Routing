@@ -174,3 +174,17 @@ set name=R01_MSK
 /user set admin password=192856
 ```
 
+# Пример выполнения: 
+<img width="1082" height="716" alt="image" src="https://github.com/user-attachments/assets/019821c2-1d71-4d57-baf9-8b32c7efbfc2" />
+
+Пример использования команд routing ospf neighbour print и mpls ldp neighbour pring на R01_spb:
+
+<img width="800" height="309" alt="image" src="https://github.com/user-attachments/assets/d41b2bd8-82d8-428a-84f5-13770282a8ee" />
+
+
+Пинги от пк и к нему: 
+
+<img width="616" height="244" alt="image" src="https://github.com/user-attachments/assets/2d633be7-dcae-4a04-b3fb-d6b73f50886a" />
+
+<img width="733" height="357" alt="image" src="https://github.com/user-attachments/assets/b053e32e-a12b-4da9-a966-88b23348c79e" />
+
