@@ -148,3 +148,6 @@ add area=backbone network=172.16.6.2/32
 set name=R01_NY
 /user set admin password=192856
 ```
+
+Маршрутизаторы R01_HKI, R01_MSK, R01_LND, и R01_LBN настроены как промежуточные устройства. Например, R01_MSK:
+
