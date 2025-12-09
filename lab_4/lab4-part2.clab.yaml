@@ -43,24 +43,27 @@ topology:
     PC1:
       kind: linux
       image: alpine:latest
-      volumes:
+      binds:
         - ./config:/config:ro
+
       exec:
         - sh /config/pc1.sh
 
     PC2:
       kind: linux
       image: alpine:latest
-      volumes:
+      binds:
         - ./config:/config:ro
+
       exec:
         - sh /config/pc2.sh
 
     PC3:
       kind: linux
       image: alpine:latest
-      volumes:
+      binds:
         - ./config:/config:ro
+
       exec:
         - sh /config/pc3.sh
 
