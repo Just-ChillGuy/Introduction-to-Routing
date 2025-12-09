@@ -5,3 +5,12 @@ lab_1/*.networklab.clab.yaml.bak
 lab_2/clab-lab2
 lab_2/configs/*.save
 lab_2/*.networklab.clab.yaml.bak
+lab_3/clab-lab3
+lab_3/configs/*.save
+lab_3/*.networklab.clab.yaml.bak
+lab_4/configs/*.save
+lab_4/*.lab4_part1.clab.yaml.bak
+lab_4/*.lab4_part2.clab.yaml.bak
+lab_4/*.networklab.clab.yaml.bak
+lab_4/clab-lab4-part1
+lab_4/clab-lab4-part2
