@@ -39,18 +39,24 @@ topology:
       mgmt-ipv4: 172.16.18.2
       binds:
         - ./config:/config
+      exec: 
+       - sh /config/pc1.sh
     PC2:
       kind: linux
       image: alpine:latest
       mgmt-ipv4: 172.16.18.3
       binds:
         - ./config:/config
+      exec: 
+       - sh /config/pc2.sh
     PC3:
       kind: linux
       image: alpine:latest
       mgmt-ipv4: 172.16.18.4
       binds:
         - ./config:/config
+      exec: 
+       - sh /config/pc3.sh
 
 
   links:
