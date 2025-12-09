@@ -1,4 +1,5 @@
 name: lab4-part2
+
 mgmt:
   network: custom_mgmt-part2
   ipv4-subnet: 172.16.18.0/24
@@ -13,52 +14,55 @@ topology:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.101
       startup-config: config/part2/r01-spb.rsc
+
     R01.HKI:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.102
       startup-config: config/part2/r01-hki.rsc
+
     R01.SVL:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.103
       startup-config: config/part2/r01-svl.rsc
+
     R01.LND:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.104
       startup-config: config/part2/r01-lnd.rsc
+
     R01.LBN:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.105
       startup-config: config/part2/r01-lbn.rsc
+
     R01.NY:
       kind: vr-ros
       mgmt-ipv4: 172.16.18.106
       startup-config: config/part2/r01-ny.rsc
-    nodes:
-  PC1:
-    kind: linux
-    image: alpine:latest
-    volumes:
-      - ./config:/config:ro
-    exec:
-      - sh /config/pc1.sh
 
-  PC2:
-    kind: linux
-    image: alpine:latest
-    volumes:
-      - ./config:/config:ro
-    exec:
-      - sh /config/pc2.sh
+    PC1:
+      kind: linux
+      image: alpine:latest
+      volumes:
+        - ./config:/config:ro
+      exec:
+        - sh /config/pc1.sh
 
-  PC3:
-    kind: linux
-    image: alpine:latest
-    volumes:
-      - ./config:/config:ro
-    exec:
-      - sh /config/pc3.sh
+    PC2:
+      kind: linux
+      image: alpine:latest
+      volumes:
+        - ./config:/config:ro
+      exec:
+        - sh /config/pc2.sh
 
-
+    PC3:
+      kind: linux
+      image: alpine:latest
+      volumes:
+        - ./config:/config:ro
+      exec:
+        - sh /config/pc3.sh
 
   links:
     - endpoints: ["R01.SPB:eth1","R01.HKI:eth1"]
@@ -70,5 +74,3 @@ topology:
     - endpoints: ["R01.SPB:eth2","PC1:eth1"]
     - endpoints: ["R01.NY:eth2","PC2:eth1"]
     - endpoints: ["R01.SVL:eth2","PC3:eth1"]
-    
-    
