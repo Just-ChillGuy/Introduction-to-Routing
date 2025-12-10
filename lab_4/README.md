@@ -178,3 +178,13 @@ add name=peerLBN address-families=l2vpn,vpnv4 remote-address=10.255.255.5 remote
 add network=10.255.255.0/24
 ```
 
+Как роутеры через bgp видят друг друга, а также как эндпоинты видят друг друга через vfs:
+
+<img width="1207" height="773" alt="image" src="https://github.com/user-attachments/assets/69ad6b96-d8a6-4f07-b6bc-e464c76dd26c" />
+
+Пропингуем пк: 
+
+<img width="832" height="302" alt="image" src="https://github.com/user-attachments/assets/9a426040-3474-498a-a9cc-5785c848cbac" />
+
+# Вторая часть работы:
+
